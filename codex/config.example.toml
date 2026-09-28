@@ -1,0 +1,7 @@
+# Minimal Codex CLI config. The installer copies this to ~/.codex/config.toml
+# only when that file does not exist yet. No model is pinned, so Codex uses
+# its current default; add `model = "..."` to choose one.
+personality = "pragmatic"
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"

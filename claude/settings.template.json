@@ -1,0 +1,64 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__codex__codex",
+      "mcp__free-search__search",
+      "mcp__free-search__research",
+      "mcp__free-search__deep_research"
+    ],
+    "defaultMode": "default"
+  },
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"Invoke the fable-gpt skill (Skill tool) now, before any other work: it defines the orchestrator/executor workflow (Claude — Fable 5 or Opus 4.8 — plans and reviews; Codex executes heavy implementation via codex:rescue; ask the user for Codex model + reasoning effort before the first delegation).\"}}'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"__CLAUDE_DIR_POSIX__/statusline-command.sh\""
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "agent-sdk-dev@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "huggingface-skills@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true,
+    "caveman@caveman": true,
+    "codex@openai-codex": true,
+    "diagram-design@diagram-design": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": { "source": "github", "repo": "JuliusBrussee/caveman" }
+    },
+    "openai-codex": {
+      "source": { "source": "github", "repo": "openai/codex-plugin-cc" }
+    },
+    "diagram-design": {
+      "source": { "source": "github", "repo": "cathrynlavery/diagram-design" }
+    }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5": { "effortLevel": "high" },
+    "claude-opus-5-5": { "effortLevel": "xhigh" }
+  },
+  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
+  "theme": "dark-ansi",
+  "verbose": true,
+  "switchModelsOnFlag": true,
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true
+}

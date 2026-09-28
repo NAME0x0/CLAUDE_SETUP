@@ -1,0 +1,36 @@
+{
+  "servers": [
+    {
+      "name": "context7",
+      "transport": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "note": "Library docs lookup. No auth needed."
+    },
+    {
+      "name": "github",
+      "transport": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "note": "Authenticate inside Claude Code with /mcp."
+    },
+    {
+      "name": "figma",
+      "transport": "http",
+      "url": "https://mcp.figma.com/mcp",
+      "note": "Authenticate inside Claude Code with /mcp."
+    },
+    {
+      "name": "codex",
+      "transport": "stdio",
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/GuDaStudio/codexmcp.git", "codexmcp"],
+      "note": "Needs uv and the Codex CLI logged in (codex login)."
+    },
+    {
+      "name": "free-search",
+      "transport": "stdio",
+      "command": "node",
+      "args": ["__CLAUDE_DIR_FWD__/mcp-servers/free-search/server.mjs"],
+      "note": "Needs PUTER_AUTH_TOKEN in your user environment. Get one free with: npm run get-token (in the server folder)."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Skills whose upstream repo has no LICENSE file. They are fetched from the author's repo at install time, pinned to the commit this setup was built from, instead of being redistributed here.",
+  "skills": [
+    {
+      "name": "logo-generator",
+      "repo": "op7418/logo-generator-skill",
+      "ref": "bf4e9ac4d4428bda261afcfe981871ceb92d94e6",
+      "path": "",
+      "files": ["SKILL.md"]
+    },
+    {
+      "name": "karpathy-guidelines",
+      "repo": "multica-ai/andrej-karpathy-skills",
+      "ref": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+      "path": "skills/karpathy-guidelines/",
+      "files": ["SKILL.md"]
+    }
+  ]
+}
